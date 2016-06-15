@@ -1,0 +1,8 @@
+{
+  "test_stack.py::test_is_empty": true,
+  "test_stack.py::test_is_empty_false": true,
+  "test_stack.py::test_len": true,
+  "test_stack.py::test_pop": true,
+  "test_stack.py::test_push": true,
+  "test_stack.py::test_top": true
+}
