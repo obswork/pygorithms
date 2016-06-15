@@ -24,19 +24,32 @@ Stack:
 """
 
 
+class Empty(Exception):
+    """Error attempting to access item from an empty container."""
+    pass
+
+
 class Stack:
 
     def __init__(self):
-        pass
+        """Create an empty stack"""
+        self._data = []    # non-public underlying Python list as storage
 
     def push(self, item):
-        pass
+        """Add item to the top of the stack."""
+        self._data.append(item)
 
     def pop(self):
-        pass
+        """Remove and return the top item from the stack.
+
+        Raise exception if the stack is empty.
+        """
+        if self.is_empty():
+            raise Empty('Stack is empty')
+        return self._data.pop()     # calling underlying Python list's pop method
 
     def top(self):
-        pass
+        """Return the top item from the stack (but don't remove it)."""
 
     def is_empty(self):
         pass
