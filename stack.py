@@ -21,6 +21,27 @@ Stack:
 
         len(s)
             return # of items in stack
+
+
+    Analysis:
+
+        space usage: O(n)
+
+        operation   |   running time
+        ------------------------------------
+        push            O(1)        * amortized bound
+        pop             O(1)        * amortized bound
+        top             O(1)
+        is_empty        O(1)
+        len             O(1)
+
+
+        * occasionally an O(n)-time worst case, when the underlying Python list has to resize its internal array
+
+
+    * Q: How can the design be improved?
+    * Hint 1: what are the most expensive operations? What makes them (relatively) expensive?
+    * Hint 2: suppose the constructor accpeted a parameter setting the value of..
 """
 
 
