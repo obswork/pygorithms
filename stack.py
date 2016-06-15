@@ -35,6 +35,9 @@ class Stack:
         """Create an empty stack"""
         self._data = []    # non-public underlying Python list as storage
 
+    def is_empty(self):
+        return len(self._data) == 0
+
     def push(self, item):
         """Add item to the top of the stack."""
         self._data.append(item)
@@ -50,9 +53,9 @@ class Stack:
 
     def top(self):
         """Return the top item from the stack (but don't remove it)."""
-
-    def is_empty(self):
-        pass
+        if self.is_empty():
+            raise Empty('Stack is empty')
+        return self._data[-1]
 
     def __len__(self):
-        pass
+        return len(self._data)
