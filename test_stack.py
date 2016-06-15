@@ -17,14 +17,18 @@ def test_top():
 
 
 def test_is_empty():
-    assert f.is_empty() == True
+    while not f.is_empty():
+        f.pop()
+    assert f.is_empty() == 1
 
 
 def test_is_empty_false():
     f.push(4)
-    assert f.is_empty() == False
+    assert f.is_empty() == 0
 
 
 def test_len():
+    while not f.is_empty():
+        f.pop()
     f.push(4)
     assert len(f) == 1
